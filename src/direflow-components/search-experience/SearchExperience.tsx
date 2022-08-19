@@ -1,7 +1,8 @@
 import React from "react";
-// import { Styled } from "direflow-component";
+import { Styled } from "direflow-component";
 import { SearchHeadlessProvider } from "@yext/search-headless-react";
 import { SearchBar, UniversalResults } from "@yext/search-ui-react";
+import styles from "@yext/search-ui-react/lib/bundle.css"
 
 interface SearchExperienceProps {
   experienceKey: string;
@@ -16,20 +17,21 @@ const SearchExperience: React.FC<SearchExperienceProps> = ({
   apiKey,
   locale
 }) => {
+  console.log({ styles })
   return (
-    // <Styled styles={{}}>
-    <SearchHeadlessProvider
-      experienceKey={experienceKey}
-      experienceVersion={experienceVersion}
-      apiKey={apiKey}
-      locale={locale}
-    >
-      <SearchBar />
-      <UniversalResults
-        verticalConfigMap={{}}
-      />
-    </SearchHeadlessProvider>
-    // </Styled>
+    <Styled styles={styles}>
+      <SearchHeadlessProvider
+        experienceKey={experienceKey}
+        experienceVersion={experienceVersion}
+        apiKey={apiKey}
+        locale={locale}
+      >
+        <SearchBar />
+        <UniversalResults
+          verticalConfigMap={{}}
+        />
+      </SearchHeadlessProvider>
+    </Styled>
   );
 }
 
