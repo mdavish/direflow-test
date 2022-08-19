@@ -19,7 +19,7 @@ const SearchExperience: React.FC<SearchExperienceProps> = ({
 }) => {
   console.log({ styles })
   return (
-    <Styled styles={styles}>
+    <Styled styles={[styles]} scoped={false}>
       <SearchHeadlessProvider
         experienceKey={experienceKey}
         experienceVersion={experienceVersion}

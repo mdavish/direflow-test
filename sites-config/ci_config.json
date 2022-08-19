@@ -1,0 +1,13 @@
+{
+  "artifactStructure": {
+    "assets": [
+      {
+        "root": "build"
+      }
+    ]
+  },
+  "buildArtifacts": {
+    "build_setup_cmd": "npm install --legacy-peer-deps",
+    "build_cmd": "npm run build"
+  }
+}
