@@ -23,10 +23,10 @@
     "build"
   ],
   "scripts": {
-    "start": "export NODE_OPTIONS=--openssl-legacy-provider && direflow-scripts start",
-    "build": "export NODE_OPTIONS=--openssl-legacy-provider && direflow-scripts build",
-    "build:lib": "export NODE_OPTIONS=--openssl-legacy-provider && direflow-scripts build:lib",
-    "test": "export NODE_OPTIONS=--openssl-legacy-provider && direflow-scripts test"
+    "start": "direflow-scripts start",
+    "build": "direflow-scripts build",
+    "build:lib": "direflow-scripts build:lib",
+    "test": "direflow-scripts test"
   },
   "dependencies": {
     "@types/node": "12.7.8",
